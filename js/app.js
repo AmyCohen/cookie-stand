@@ -12,16 +12,17 @@ var firstPike = {
   },
   arrayOfHoursAndCookies: [],
   cookiesSoldPerHour: function() {
-    //var hourlyCookieSalesContainer = document.getElementById('first');
+    var hourlyCookieSalesContainer = document.getElementById('pike');
     for (var i = 0; i < this.hoursOfOperation.length; i++) {
 
       var customersAtHour = this.customersPerHour();
       var cookiesSoldEveryHour = Math.floor(customersAtHour * this.avgCookiesPerCust);
+
       this.arrayOfHoursAndCookies.push(this.hoursOfOperation[i] + ': ' + cookiesSoldEveryHour + ' cookies');
-      //var cookieSales = document.createElement('li');
-      //cookieSales.textContent = [this.arrayOfHoursAndCookies];
-      //hourlyCookieSalesContainer.appendChild([this.arrayOfHoursAndCookies]);
-      //return [cookiesSoldEveryHour];
+
+      var cookieSales = document.createElement('li');
+      cookieSales.textContent = this.arrayOfHoursAndCookies[i];
+      hourlyCookieSalesContainer.appendChild(cookieSales);
     }
   }
 };
