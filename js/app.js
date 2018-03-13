@@ -1,4 +1,5 @@
 'use strict';
+var hoursOfOperation = ['6 am', '7 am', '7 am', '9 am', '10 am', '11 am', '12 pm', '1 pm', '2 pm', '3 pm', '4 pm', '5 pm', '6 pm', '7 pm', '8 pm'];
 
 function SalmonCookiesByLocation(nameOfLocation, minCustPerHour, maxCustPerHour, avgCookiesPerCust) {
   this.nameOfLocation = nameOfLocation;
@@ -12,18 +13,18 @@ function SalmonCookiesByLocation(nameOfLocation, minCustPerHour, maxCustPerHour,
 SalmonCookiesByLocation.prototype.customersPerHour = function() {
   var customerTrafficFlow = Math.floor(Math.random() * this.maxCustPerHour) + 1;
   return customerTrafficFlow;
-}
+};
 
 SalmonCookiesByLocation.prototype.cookiesSoldPerHour = function() {
   var hourlyCookieSalesContainer = document.getElementById('pike');
   var totalCookiesContainer = document.getElementById('pike-totals');
 
-  for (var i = 0; i < this.hoursOfOperation.length; i++) {
+  for (var i = 0; i < hoursOfOperation.length; i++) {
 
     var customersAtHour = this.customersPerHour();
     var cookiesSoldEveryHour = Math.floor(customersAtHour * this.avgCookiesPerCust);
 
-    this.arrayOfHoursAndCookies.push(this.hoursOfOperation[i] + ': ' + cookiesSoldEveryHour + ' cookies');
+    this.arrayOfHoursAndCookies.push(hoursOfOperation[i] + ': ' + cookiesSoldEveryHour + ' cookies');
 
     this.runningCookieDailyTotals += cookiesSoldEveryHour;
     console.log('Pike: ' + this.runningCookieDailyTotals);
@@ -36,47 +37,43 @@ SalmonCookiesByLocation.prototype.cookiesSoldPerHour = function() {
   var dailyTotals = document.createElement('li');
   dailyTotals.textContent = 'Total: ' + this.runningCookieDailyTotals;
   totalCookiesContainer.appendChild(dailyTotals);
-}
-
-hoursOfOperation: ['6 am', '7 am', '7 am', '9 am', '10 am', '11 am', '12 pm', '1 pm', '2 pm', '3 pm', '4 pm', '5 pm', '6 pm', '7 pm', '8 pm'],
-
-
-var firstPike = {
-  nameOfLocation: '1st and Pike',
-  minCustPerHour: 23,
-  maxCustPerHour: 65,
-  avgCookiesPerCust: 6.3,
-  runningCookieDailyTotals: 0,
-  customersPerHour: function() {
-    var customerTrafficFlow = Math.floor(Math.random() * this.maxCustPerHour) + 1;
-    return customerTrafficFlow;
-  },
-  arrayOfHoursAndCookies: [],
-  cookiesSoldPerHour: function() {
-
-    var hourlyCookieSalesContainer = document.getElementById('pike');
-    var totalCookiesContainer = document.getElementById('pike-totals');
-
-    for (var i = 0; i < this.hoursOfOperation.length; i++) {
-
-      var customersAtHour = this.customersPerHour();
-      var cookiesSoldEveryHour = Math.floor(customersAtHour * this.avgCookiesPerCust);
-
-      this.arrayOfHoursAndCookies.push(this.hoursOfOperation[i] + ': ' + cookiesSoldEveryHour + ' cookies');
-
-      this.runningCookieDailyTotals += cookiesSoldEveryHour;
-      console.log('Pike: ' + this.runningCookieDailyTotals);
-
-      var cookieSales = document.createElement('li');
-      cookieSales.textContent = this.arrayOfHoursAndCookies[i];
-      hourlyCookieSalesContainer.appendChild(cookieSales);
-
-    }
-    var dailyTotals = document.createElement('li');
-    dailyTotals.textContent = 'Total: ' + this.runningCookieDailyTotals;
-    totalCookiesContainer.appendChild(dailyTotals);
-  }
 };
+
+
+var firstPike = new SalmonCookiesByLocation('1st and Pike', 23, 65, 6.3);
+
+
+//   runningCookieDailyTotals: 0,
+//   customersPerHour: function() {
+//     var customerTrafficFlow = Math.floor(Math.random() * this.maxCustPerHour) + 1;
+//     return customerTrafficFlow;
+//   },
+//   arrayOfHoursAndCookies: [],
+//   cookiesSoldPerHour: function() {
+
+//     var hourlyCookieSalesContainer = document.getElementById('pike');
+//     var totalCookiesContainer = document.getElementById('pike-totals');
+
+//     for (var i = 0; i < this.hoursOfOperation.length; i++) {
+
+//       var customersAtHour = this.customersPerHour();
+//       var cookiesSoldEveryHour = Math.floor(customersAtHour * this.avgCookiesPerCust);
+
+//       this.arrayOfHoursAndCookies.push(this.hoursOfOperation[i] + ': ' + cookiesSoldEveryHour + ' cookies');
+
+//       this.runningCookieDailyTotals += cookiesSoldEveryHour;
+//       console.log('Pike: ' + this.runningCookieDailyTotals);
+
+//       var cookieSales = document.createElement('li');
+//       cookieSales.textContent = this.arrayOfHoursAndCookies[i];
+//       hourlyCookieSalesContainer.appendChild(cookieSales);
+
+//     }
+//     var dailyTotals = document.createElement('li');
+//     dailyTotals.textContent = 'Total: ' + this.runningCookieDailyTotals;
+//     totalCookiesContainer.appendChild(dailyTotals);
+//   }
+// };
 
 firstPike.cookiesSoldPerHour();
 console.log(firstPike.arrayOfHoursAndCookies);
