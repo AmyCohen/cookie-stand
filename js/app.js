@@ -41,80 +41,12 @@ SalmonCookiesByLocation.prototype.cookiesSoldPerHour = function() {
 
 
 var firstPike = new SalmonCookiesByLocation('1st and Pike', 23, 65, 6.3);
+var seaTacAirport = new SalmonCookiesByLocation('SeaTac Airport', 3, 24, 1.2);
 
 
-//   runningCookieDailyTotals: 0,
-//   customersPerHour: function() {
-//     var customerTrafficFlow = Math.floor(Math.random() * this.maxCustPerHour) + 1;
-//     return customerTrafficFlow;
-//   },
-//   arrayOfHoursAndCookies: [],
-//   cookiesSoldPerHour: function() {
-
-//     var hourlyCookieSalesContainer = document.getElementById('pike');
-//     var totalCookiesContainer = document.getElementById('pike-totals');
-
-//     for (var i = 0; i < this.hoursOfOperation.length; i++) {
-
-//       var customersAtHour = this.customersPerHour();
-//       var cookiesSoldEveryHour = Math.floor(customersAtHour * this.avgCookiesPerCust);
-
-//       this.arrayOfHoursAndCookies.push(this.hoursOfOperation[i] + ': ' + cookiesSoldEveryHour + ' cookies');
-
-//       this.runningCookieDailyTotals += cookiesSoldEveryHour;
-//       console.log('Pike: ' + this.runningCookieDailyTotals);
-
-//       var cookieSales = document.createElement('li');
-//       cookieSales.textContent = this.arrayOfHoursAndCookies[i];
-//       hourlyCookieSalesContainer.appendChild(cookieSales);
-
-//     }
-//     var dailyTotals = document.createElement('li');
-//     dailyTotals.textContent = 'Total: ' + this.runningCookieDailyTotals;
-//     totalCookiesContainer.appendChild(dailyTotals);
-//   }
-// };
 
 firstPike.cookiesSoldPerHour();
 console.log(firstPike.arrayOfHoursAndCookies);
-
-var seaTacAirport = {
-  nameOfLocation: 'SeaTac Airport',
-  hoursOfOperation: ['6 am', '7 am', '7 am', '9 am', '10 am', '11 am', '12 pm', '1 pm', '2 pm', '3 pm', '4 pm', '5 pm', '6 pm', '7 pm', '8 pm'],
-  minCustPerHour: 3,
-  maxCustPerHour: 24,
-  avgCookiesPerCust: 1.2,
-  runningCookieDailyTotals: 0,
-  customersPerHour: function() {
-    var customerTrafficFlow = Math.floor(Math.random() * this.maxCustPerHour) + 1;
-    return customerTrafficFlow;
-  },
-  arrayOfHoursAndCookies: [],
-  cookiesSoldPerHour: function() {
-
-    var hourlyCookieSalesContainer = document.getElementById('seatac');
-    var totalCookiesContainer = document.getElementById('seatac-totals');
-
-    for (var i = 0; i < this.hoursOfOperation.length; i ++) {
-
-      var customersAtHour = this.customersPerHour();
-      var cookiesSoldEveryHour = Math.floor(this.avgCookiesPerCust * customersAtHour);
-
-      this.arrayOfHoursAndCookies.push(this.hoursOfOperation[i] + ': ' + cookiesSoldEveryHour + ' cookies');
-
-      this.runningCookieDailyTotals += cookiesSoldEveryHour;
-      console.log('SeaTac: ' + this.runningCookieDailyTotals);
-
-
-      var cookieSales = document.createElement('li');
-      cookieSales.textContent = this.arrayOfHoursAndCookies[i];
-      hourlyCookieSalesContainer.appendChild(cookieSales);
-    }
-    var dailyTotals = document.createElement('li');
-    dailyTotals.textContent = 'Total: ' + this.runningCookieDailyTotals;
-    totalCookiesContainer.appendChild(dailyTotals);
-  }
-};
 
 seaTacAirport.cookiesSoldPerHour();
 console.log(seaTacAirport.arrayOfHoursAndCookies);
