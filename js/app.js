@@ -43,55 +43,7 @@ SalmonCookiesByLocation.prototype.cookiesSoldPerHour = function() {
 var firstPike = new SalmonCookiesByLocation('1st and Pike', 23, 65, 6.3);
 var seaTacAirport = new SalmonCookiesByLocation('SeaTac Airport', 3, 24, 1.2);
 var seattleCenter = new SalmonCookiesByLocation('Seattle Center', 11, 38, 3.7);
-
-
-firstPike.cookiesSoldPerHour();
-console.log(firstPike.arrayOfHoursAndCookies);
-
-seaTacAirport.cookiesSoldPerHour();
-console.log(seaTacAirport.arrayOfHoursAndCookies);
-
-seattleCenter.cookiesSoldPerHour();
-console.log(seattleCenter.arrayOfHoursAndCookies);
-
-
-var capitolHill = {
-  nameOfLocation: 'Capitol Hill',
-  hoursOfOperation: ['6 am', '7 am', '7 am', '9 am', '10 am', '11 am', '12 pm', '1 pm', '2 pm', '3 pm', '4 pm', '5 pm', '6 pm', '7 pm', '8 pm'],
-  minCustPerHour: 20,
-  maxCustPerHour: 38,
-  avgCookiesPerCust: 2.3,
-  runningCookieDailyTotals: 0,
-  customersPerHour: function () {
-    var customerTrafficFlow = Math.round(Math.random() * this.maxCustPerHour) + 1;
-    return customerTrafficFlow;
-  },
-  arrayOfHoursAndCookies: [],
-  cookiesSoldPerHour: function() {
-    var hourlyCookieSalesContainer = document.getElementById('capitol-hill');
-    var totalCookiesContainer = document.getElementById('capitol-hill-totals');
-
-    for (var i = 0; i < this.hoursOfOperation.length; i++) {
-      var customersAtHour = this.customersPerHour();
-      var cookiesSoldEveryHour =  Math.floor(this.avgCookiesPerCust * customersAtHour);
-
-      this.arrayOfHoursAndCookies.push(this.hoursOfOperation[i] + ': ' + cookiesSoldEveryHour + ' cookies');
-
-      this.runningCookieDailyTotals += cookiesSoldEveryHour;
-      console.log('Capitol Hill: ' + this.runningCookieDailyTotals);
-
-      var cookiesSales = document.createElement('li');
-      cookiesSales.textContent = this.arrayOfHoursAndCookies[i];
-      hourlyCookieSalesContainer.appendChild(cookiesSales);
-    }
-    var dailyTotals = document.createElement('li');
-    dailyTotals.textContent = 'Total: ' + this.runningCookieDailyTotals;
-    totalCookiesContainer.appendChild(dailyTotals);
-  }
-};
-
-capitolHill.cookiesSoldPerHour();
-console.log(capitolHill.arrayOfHoursAndCookies);
+var capitolHill = new SalmonCookiesByLocation('Capitol Hill', 20, 38, 2.3);
 
 
 var alki = {
@@ -128,6 +80,17 @@ var alki = {
     totalCookiesContainer.appendChild(dailyTotals);
   }
 };
+firstPike.cookiesSoldPerHour();
+console.log(firstPike.arrayOfHoursAndCookies);
+
+seaTacAirport.cookiesSoldPerHour();
+console.log(seaTacAirport.arrayOfHoursAndCookies);
+
+seattleCenter.cookiesSoldPerHour();
+console.log(seattleCenter.arrayOfHoursAndCookies);
+
+capitolHill.cookiesSoldPerHour();
+console.log(capitolHill.arrayOfHoursAndCookies);
 
 alki.cookiesSoldPerHour();
 console.log(alki.arrayOfHoursAndCookies);
