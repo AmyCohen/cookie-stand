@@ -11,12 +11,15 @@ function SalmonCookiesByLocation(nameOfLocation, minCustPerHour, maxCustPerHour,
   this.arrayOfHoursAndCookies = [];
   this.runningCookieDailyTotals = 0;
   allLocations.push(this);
+
 }
 
 SalmonCookiesByLocation.prototype.customersPerHour = function() {
   var customerTrafficFlow = Math.floor(Math.random() * this.maxCustPerHour) + 1;
   return customerTrafficFlow;
 };
+SalmonCookiesByLocation.prototype.customersPerHour();
+
 
 SalmonCookiesByLocation.prototype.cookiesSoldPerHour = function() {
 
@@ -25,13 +28,12 @@ SalmonCookiesByLocation.prototype.cookiesSoldPerHour = function() {
     var customersAtHour = this.customersPerHour();
     var cookiesSoldEveryHour = Math.floor(customersAtHour * this.avgCookiesPerCust);
 
-    this.arrayOfHoursAndCookies.push(hoursOfOperation[i] + ': ' + cookiesSoldEveryHour + ' cookies');
+    this.arrayOfHoursAndCookies.push(cookiesSoldEveryHour);
 
     this.runningCookieDailyTotals += cookiesSoldEveryHour;
     console.log(this.nameOfLocation + ': ' + this.runningCookieDailyTotals);
   }
 };
-
 
 var salmonCookieStands = document.getElementById('salmon-cookie-stands');
 
@@ -43,56 +45,59 @@ SalmonCookiesByLocation.prototype.render = function() {
   tdElement.textContent = this.nameOfLocation;
   trElement.appendChild(tdElement);
 
-  tdElement = document.createElement('td');
-  tdElement.textContent = this.minCustPerHour;
-  trElement.appendChild(tdElement);
+  for (var i = 0; i < this.arrayOfHoursAndCookies.length; i++){
+    tdElement = document.createElement('td');
+    tdElement.textContent = this.arrayOfHoursAndCookies[i];
+    trElement.appendChild(tdElement);
+  }
 
   tdElement = document.createElement('td');
-  tdElement.textContent = this.maxCustPerHour;
+  tdElement.textContent = this.runningCookieDailyTotals;
   trElement.appendChild(tdElement);
-
-  tdElement = document.createElement('td');
-  tdElement.textContent = this.avgCookiesPerCust;
-  trElement.appendChild(tdElement);
-
 
   salmonCookieStands.appendChild(trElement);
 };
+
+function headerRow() {
+  var headerTrElement = document.createElement('tr');
+  var thElement = document.createElement('th');
+  thElement.textContent = 'Location';
+  headerTrElement.appendChild(thElement);
+
+  for (var i = 0; i < hoursOfOperation.length; i++){
+    thElement = document.createElement('th');
+    thElement.textContent = hoursOfOperation[i];
+    headerTrElement.appendChild(thElement);
+  }
+
+  thElement = document.createElement('th');
+  thElement.textContent = 'Daily Location Totals';
+  headerTrElement.appendChild(thElement);
+
+  salmonCookieStands.appendChild(headerTrElement);
+}
+headerRow();
+
 var firstPike = new SalmonCookiesByLocation('1st and Pike', 23, 65, 6.3);
 var seaTacAirport = new SalmonCookiesByLocation('SeaTac Airport', 3, 24, 1.2);
 var seattleCenter = new SalmonCookiesByLocation('Seattle Center', 11, 38, 3.7);
 var capitolHill = new SalmonCookiesByLocation('Capitol Hill', 20, 38, 2.3);
 var alki = new SalmonCookiesByLocation('Alki', 2, 16, 4.6);
-
-
-// var hourlyCookieSalesContainer = document.getElementById('pike');
-// var totalCookiesContainer = document.getElementById('pike-totals');
-
-// var cookieSales = document.createElement('li');
-// cookieSales.textContent = this.arrayOfHoursAndCookies[i];
-// hourlyCookieSalesContainer.appendChild(cookieSales);
-
-// var dailyTotals = document.createElement('li');
-// dailyTotals.textContent = 'Total: ' + this.runningCookieDailyTotals;
-// totalCookiesContainer.appendChild(dailyTotals);
+firstPike.cookiesSoldPerHour();
+seaTacAirport.cookiesSoldPerHour();
+seattleCenter.cookiesSoldPerHour();
+capitolHill.cookiesSoldPerHour();
+alki.cookiesSoldPerHour();
 
 firstPike.render();
 seaTacAirport.render();
 seattleCenter.render();
 capitolHill.render();
 alki.render();
-// firstPike.cookiesSoldPerHour();
+
 console.log(firstPike.arrayOfHoursAndCookies);
-
-// seaTacAirport.cookiesSoldPerHour();
 console.log(seaTacAirport.arrayOfHoursAndCookies);
-
-// seattleCenter.cookiesSoldPerHour();
 console.log(seattleCenter.arrayOfHoursAndCookies);
-
-// capitolHill.cookiesSoldPerHour();
 console.log(capitolHill.arrayOfHoursAndCookies);
-
-// alki.cookiesSoldPerHour();
 console.log(alki.arrayOfHoursAndCookies);
 
