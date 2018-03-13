@@ -62,3 +62,34 @@ var seaTacAirport = {
 seaTacAirport.cookiesSoldPerHour();
 console.log(seaTacAirport.arrayOfHoursAndCookies);
 
+var seattleCenter = {
+  nameOfLocation: 'Seattle Center',
+  hoursOfOperation: ['6 am', '7 am', '7 am', '9 am', '10 am', '11 am', '12 pm', '1 pm', '2 pm', '3 pm', '4 pm', '5 pm', '6 pm', '7 pm', '8 pm'],
+  minCustPerHour: 3,
+  maxCustPerHour: 24,
+  avgCookiesPerCust: 1.2,
+  customersPerHour: function () {
+    var customerTrafficFlow = Math.round(Math.random() * this.maxCustPerHour) + 1;
+    return customerTrafficFlow;
+  },
+  arrayOfHoursAndCookies: [],
+  cookiesSoldPerHour: function() {
+    var hourlyCookieSalesContainer = document.getElementById('seattle-center');
+
+    for (var i = 0; i < this.hoursOfOperation.length; i++) {
+      var customersAtHour = this.customersPerHour();
+      var cookiesSoldEveryHour =  Math.floor(this.avgCookiesPerCust * customersAtHour);
+
+      this.arrayOfHoursAndCookies.push(this.hoursOfOperation[i] + ': ' + cookiesSoldEveryHour + ' cookies');
+
+      var cookiesSales = document.createElement('li');
+      cookiesSales.textContent = this.arrayOfHoursAndCookies[i];
+      hourlyCookieSalesContainer.appendChild(cookiesSales);
+    }
+  }
+};
+
+seattleCenter.cookiesSoldPerHour();
+console.log(seattleCenter.arrayOfHoursAndCookies);
+
+
