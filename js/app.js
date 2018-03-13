@@ -7,7 +7,7 @@ var firstPike = {
   maxCustPerHour: 65,
   avgCookiesPerCust: 6.3,
   customersPerHour: function() {
-    var customerTrafficFlow = Math.floor(Math.random() * 65) + 1;
+    var customerTrafficFlow = Math.floor(Math.random() * this.maxCustPerHour) + 1;
     return customerTrafficFlow;
   },
   arrayOfHoursAndCookies: [],
@@ -37,7 +37,7 @@ var seaTacAirport = {
   maxCustPerHour: 24,
   avgCookiesPerCust: 1.2,
   customersPerHour: function() {
-    var customerTrafficFlow = Math.floor(Math.random() * 65) + 1;
+    var customerTrafficFlow = Math.floor(Math.random() * this.maxCustPerHour) + 1;
     return customerTrafficFlow;
   },
   arrayOfHoursAndCookies: [],
