@@ -61,7 +61,7 @@ SalmonCookiesByLocation.prototype.render = function() {
 function headerRow() {
   var headerTrElement = document.createElement('tr');
   var thElement = document.createElement('th');
-  thElement.textContent = 'Location';
+  thElement.textContent = '';
   headerTrElement.appendChild(thElement);
 
   for (var i = 0; i < hoursOfOperation.length; i++){
@@ -83,6 +83,7 @@ var seaTacAirport = new SalmonCookiesByLocation('SeaTac Airport', 3, 24, 1.2);
 var seattleCenter = new SalmonCookiesByLocation('Seattle Center', 11, 38, 3.7);
 var capitolHill = new SalmonCookiesByLocation('Capitol Hill', 20, 38, 2.3);
 var alki = new SalmonCookiesByLocation('Alki', 2, 16, 4.6);
+
 firstPike.cookiesSoldPerHour();
 seaTacAirport.cookiesSoldPerHour();
 seattleCenter.cookiesSoldPerHour();
