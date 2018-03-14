@@ -136,7 +136,7 @@ function headerRow() {
   }
 
   thElement = document.createElement('th');
-  thElement.textContent = 'Daily Totals';
+  thElement.textContent = 'Totals';
   headerTrElement.appendChild(thElement);
   tHeadElement.appendChild(headerTrElement);
 
