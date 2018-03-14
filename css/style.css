@@ -26,10 +26,10 @@ body img {
 } */
 
 h1 {
-  font-size: 600%;
+  font-size: 500%;
   font-family: 'Pacifico', cursive, serif;
   margin: 60px;
-  color: rgb(15, 212, 203);
+  color: rgb(39, 71, 144);
 }
 
 h1 img {
@@ -44,9 +44,7 @@ h2 {
   margin-top: 60px;
   margin-left: 60px;
   margin-bottom: 15px;
-  color: rgb(15, 212, 203);
-  -webkit-text-stroke: 1px black;
-
+  color: rgb(39, 71, 144);
 }
 
 h3 {
