@@ -35,6 +35,33 @@ SalmonCookiesByLocation.prototype.cookiesSoldPerHour = function() {
   }
 };
 
+var firstPike = new SalmonCookiesByLocation('1st and Pike', 23, 65, 6.3);
+var seaTacAirport = new SalmonCookiesByLocation('SeaTac Airport', 3, 24, 1.2);
+var seattleCenter = new SalmonCookiesByLocation('Seattle Center', 11, 38, 3.7);
+var capitolHill = new SalmonCookiesByLocation('Capitol Hill', 20, 38, 2.3);
+var alki = new SalmonCookiesByLocation('Alki', 2, 16, 4.6);
+
+
+
+//TODO: functions for determining hourly - totals: Not right yet
+// var output = [];
+
+// var hourlyTotals = function() {
+//   var pike = firstPike.arrayOfHoursAndCookies;
+//   var sta = seaTacAirport.arrayOfHoursAndCookies;
+//   var sc = seattleCenter.arrayOfHoursAndCookies;
+//   var ch = capitolHill.arrayOfHoursAndCookies;
+//   var ab = alki.arrayOfHoursAndCookies;
+
+//   for (var i = 0; i < hoursOfOperation.length; i++) {
+//     output.push(pike[i] + sta[i] + sc[i] + ch[i] + ab[i]);
+//   }
+//   return output;
+// };
+
+// hourlyTotals();
+// console.log(output);
+
 var salmonCookieStands = document.getElementById('salmon-cookie-stands');
 
 SalmonCookiesByLocation.prototype.render = function() {
@@ -45,9 +72,16 @@ SalmonCookiesByLocation.prototype.render = function() {
   tdElement.textContent = this.nameOfLocation;
   trElement.appendChild(tdElement);
 
-  for (var i = 0; i < this.arrayOfHoursAndCookies.length; i++){
+  //TODO: how to append to the table with a new array
+  // for (var i = 0; i < output.length; i++ ) {
+  //   tdElement = document.createElement('td');
+  //   tdElement.textContent = output[i];
+  //   trElement.appendChild(tdElement);
+  // }
+
+  for (var j = 0; j < this.arrayOfHoursAndCookies.length; j++){
     tdElement = document.createElement('td');
-    tdElement.textContent = this.arrayOfHoursAndCookies[i];
+    tdElement.textContent = this.arrayOfHoursAndCookies[j];
     trElement.appendChild(tdElement);
   }
 
@@ -78,11 +112,12 @@ function headerRow() {
 }
 headerRow();
 
-var firstPike = new SalmonCookiesByLocation('1st and Pike', 23, 65, 6.3);
-var seaTacAirport = new SalmonCookiesByLocation('SeaTac Airport', 3, 24, 1.2);
-var seattleCenter = new SalmonCookiesByLocation('Seattle Center', 11, 38, 3.7);
-var capitolHill = new SalmonCookiesByLocation('Capitol Hill', 20, 38, 2.3);
-var alki = new SalmonCookiesByLocation('Alki', 2, 16, 4.6);
+
+// var firstPike = new SalmonCookiesByLocation('1st and Pike', 23, 65, 6.3);
+// var seaTacAirport = new SalmonCookiesByLocation('SeaTac Airport', 3, 24, 1.2);
+// var seattleCenter = new SalmonCookiesByLocation('Seattle Center', 11, 38, 3.7);
+// var capitolHill = new SalmonCookiesByLocation('Capitol Hill', 20, 38, 2.3);
+// var alki = new SalmonCookiesByLocation('Alki', 2, 16, 4.6);
 
 firstPike.cookiesSoldPerHour();
 seaTacAirport.cookiesSoldPerHour();
@@ -96,9 +131,26 @@ seattleCenter.render();
 capitolHill.render();
 alki.render();
 
-console.log(firstPike.arrayOfHoursAndCookies);
-console.log(seaTacAirport.arrayOfHoursAndCookies);
-console.log(seattleCenter.arrayOfHoursAndCookies);
-console.log(capitolHill.arrayOfHoursAndCookies);
-console.log(alki.arrayOfHoursAndCookies);
+//TODO: possibly add a new table element to try and get the totals at the bottom
+// var totalsTableContainer = document.getElementById('hourly-totals');
+
+// function totalsTable() {
+//   var totalsTrElement = document.createElement('tr');
+//   var tdElement = document.createElement('td');
+//   tdElement.textContent = 'Hourly Totals:';
+//   totalsTrElement.appendChild(tdElement);
+
+//   for (var i = 0; i < output.length; i++){
+//     tdElement = document.createElement('td');
+//     tdElement.textContent = output[i];
+//     totalsTrElement.appendChild(tdElement);
+//   }
+
+//   tdElement = document.createElement('td');
+//   tdElement.textContent = '';
+//   totalsTrElement.appendChild(tdElement);
+
+//   totalsTableContainer.appendChild(totalsTrElement);
+// }
+// totalsTable();
 
