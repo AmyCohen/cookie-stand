@@ -22,7 +22,7 @@ SalmonCookiesByLocation.prototype.customersPerHour = function() {
 };
 
 SalmonCookiesByLocation.prototype.cookiesSoldPerHour = function() {
-
+  this.arrayOfHoursAndCookies = [];
   for (var i = 0; i < hoursOfOperation.length; i++) {
 
     var customersAtHour = this.customersPerHour();
@@ -114,6 +114,7 @@ function addNewLocation(event) {
   salmonCookieStands.innerHTML = '';
   console.log(salmonCookieStands);
   headerRow();
+  renderAllLocations();
 }
 
 storeLocations.addEventListener('submit', addNewLocation);
@@ -144,4 +145,3 @@ function headerRow() {
 headerRow();
 renderAllLocations();
 hourlyTotals();
-// addNewLocation();
