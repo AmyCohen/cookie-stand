@@ -17,7 +17,7 @@ function SalmonCookiesByLocation(nameOfLocation, minCustPerHour, maxCustPerHour,
 }
 
 SalmonCookiesByLocation.prototype.customersPerHour = function() {
-  var customerTrafficFlow = Math.floor(Math.random() * this.maxCustPerHour) + 1;
+  var customerTrafficFlow = Math.floor(Math.random() * (this.maxCustPerHour - this.minCustPerHour) + this.minCustPerHour);
   return customerTrafficFlow;
 };
 
@@ -115,6 +115,7 @@ function addNewLocation(event) {
   console.log(salmonCookieStands);
   headerRow();
   renderAllLocations();
+  hourlyTotals();
 }
 
 storeLocations.addEventListener('submit', addNewLocation);
@@ -145,3 +146,4 @@ function headerRow() {
 headerRow();
 renderAllLocations();
 hourlyTotals();
+console.log(hourlyTotals);
