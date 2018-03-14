@@ -1,5 +1,5 @@
 'use strict';
-var hoursOfOperation = ['6 am', '7 am', '7 am', '9 am', '10 am', '11 am', '12 pm', '1 pm', '2 pm', '3 pm', '4 pm', '5 pm', '6 pm', '7 pm', '8 pm'];
+var hoursOfOperation = ['6 am', '7 am', '8 am', '9 am', '10 am', '11 am', '12 pm', '1 pm', '2 pm', '3 pm', '4 pm', '5 pm', '6 pm', '7 pm', '8 pm'];
 
 var allLocations = [];
 var output = [];
@@ -100,7 +100,6 @@ function headerRow() {
     thElement = document.createElement('th');
     thElement.textContent = hoursOfOperation[i];
     headerTrElement.appendChild(thElement);
-    tHeadElement.appendChild(headerTrElement);
   }
 
   thElement = document.createElement('th');
@@ -113,26 +112,22 @@ function headerRow() {
 
 function footerRow() {
 
-  var tFootElement = document.createElement('tfoot');
   var footerTrElement = document.createElement('tr');
   var tdElement = document.createElement('td');
 
   tdElement.textContent = 'Hourly Totals';
   footerTrElement.appendChild(tdElement);
-  tFootElement.appendChild(footerTrElement);
 
-  for (var i = 0; i < 16; i++){
+  for (var i = 0; i < output.length; i++){
     tdElement = document.createElement('td');
     tdElement.textContent = output[i];
     footerTrElement.appendChild(tdElement);
-    tFootElement.appendChild(footerTrElement);
   }
+  var endElement = document.createElement('td');
+  endElement.textContent = '';
+  footerTrElement.appendChild(endElement);
 
-  tdElement.textContent = '';
-  footerTrElement.appendChild(tdElement);
-  tFootElement.appendChild(footerTrElement);
-
-  salmonCookieStands.appendChild(tFootElement);
+  salmonCookieStands.appendChild(footerTrElement);
 }
 
 
