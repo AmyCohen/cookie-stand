@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(223, 210, 193);
+  background-color: rgb(183, 192, 165);
 }
 body, html {
   height: 100%;
@@ -10,20 +10,6 @@ body img {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-/*TODO:
- body img {
-  opacity: .50;
-  background-attachment: fixed;
-  background-size: 100%;
-  position: absolute;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
 
 h1 {
   font-size: 500%;
@@ -39,12 +25,14 @@ h1 img {
 }
 
 h2 {
-  font-size: 250%;
-  font-family: 'Pacifico', cursive, serif;
+  font-size: 225%;
+  font-family: 'Rammetto One', cursive, serif;
   margin-top: 60px;
   margin-left: 60px;
   margin-bottom: 15px;
-  color: rgb(39, 71, 144);
+  color: rgb(123, 180, 152);
+  -webkit-text-stroke-color: rgb(39, 71, 144);
+  -webkit-text-stroke-width: 2px;
 }
 
 h3 {
@@ -56,14 +44,15 @@ h3 {
 }
 
 #popout {
-  background-color: rgb(183, 192, 165);
+  background-color: rgb(223, 210, 193);
+
   padding-top: 1px;
   padding-bottom: 30px;
 }
 
 table {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 110%;
+  font-family: 'Oswald', sans-serif;
+  font-size: 225%;
   text-align: center;
   table-layout: fixed;
   width: 100%;
@@ -73,13 +62,15 @@ table {
 
 table tr th {
   margin-right: 30px;
+  font-size: 75%
   font-weight: bold;
   padding-bottom: 10px;
   color: rgb(39, 71, 144);
 }
 
 table tr td {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Oswald', sans-serif;
+  font-size: 50%;
   padding-bottom: 5px;
 }
 

@@ -57,10 +57,30 @@ td:first-child {
   width: 50px;
 }
 
-th:last-child {
-  width: 30px;
+td:last-child {
+  background-color: rgb(150, 216, 184);
+  font-weight: bold;
 }
 
-table tr:nth-child(odd) {
-  background-color: rgb(197, 194, 191);
+th:last-child {
+  width: 10px;
 }
+
+form {
+  margin: 30px;
+  padding: 10px;
+  background-color: rgb(223, 210, 193);
+  width: 28%;
+}
+
+legend {
+  color: black;
+  font-size: 150%;
+}
+
+p {
+  font-size: 130%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+

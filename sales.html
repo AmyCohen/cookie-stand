@@ -1,4 +1,4 @@
-<!Doctype <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>Salmon Cookies</title>
@@ -13,9 +13,40 @@
   <h1>Seattle Salmon Cookies</h1>
   <h2>Sales Projection</h2>
 
-  <table id="salmon-cookie-stands"></table>
+  <table id="salmonCookieStands"></table>
   <table id="hourly-totals"></table>
 
+  <form id="storeLocations">
+    <fieldset>
+
+      <div>
+      <legend>Cookie Stand Location Expander</legend>
+
+      <p>
+      <lable for="storeName">Store Name</lable>
+      <input type="text" name="storeName">
+      </p>
+
+      <p>
+      <lable for="minCust">Min Cust Per Hour</lable>
+      <input type="number" name="minCust">
+      </p>
+
+      <p>
+      <lable for="maxCust">Max Cust Per Hour</lable>
+      <input type="number" name="maxCust">
+      </p>
+
+      <p>
+      <lable for="avgSale">Avg Sale QTY Per Cust</lable>
+      <input type="any" name="avgSale">
+      </p>
+
+      <button>ADD A LOCATION</button>
+    </div>
+
+    </fieldset>
+  </form>
 
 
 
