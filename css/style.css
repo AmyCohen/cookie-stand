@@ -1,31 +1,31 @@
+
+
 body {
+  /* background: url("../img/seattleBackground.jpg"); */
   background-color: rgb(183, 192, 165);
 }
-body, html {
-  height: 100%;
+
+#logo {
+  margin-left: 30px;
+  width: 60%;
 }
 
-body img {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-h1 {
-  font-size: 500%;
-  font-family: 'Pacifico', cursive, serif;
-  margin: 60px;
-  color: rgb(39, 71, 144);
-}
-
-h1 img {
-  z-index: 2;
+#family {
   float: right;
-  width: 30%;
+  width: 35%;
 }
 
-h2 {
-  font-size: 225%;
+.popout {
+  background-color: rgb(223, 210, 193);
+  padding-top: 1px;
+  padding-bottom: 30px;
+  height: 300px;
+  width: 100%;
+}
+
+.popout h2 {
+  font-size: 3em;
+  /* font-family: 'Pacifico', cursive, serif; */
   font-family: 'Rammetto One', cursive, serif;
   margin-top: 60px;
   margin-left: 60px;
@@ -35,59 +35,130 @@ h2 {
   -webkit-text-stroke-width: 2px;
 }
 
-h3 {
-  font-size: 110%;
-  font-family: 'Times New Roman';
+.popout h3 {
+  font-size: 1.5em;
+  font-family: 'Rammetto One', cursive, serif;
   margin-top: 10px;
   margin-left: 60px;
   margin-bottom: 15px;
+  color: rgb(123, 180, 152);
 }
 
-#popout {
-  background-color: rgb(223, 210, 193);
+section.popout div {
+  display: inline-block;
+  /* float: left; */
+  margin: .75em;
+  padding: 10px;
+  width: 16%;
+}
 
+section.popout h4 {
+  color: rgb(39, 71, 144);
+  margin-bottom: 10px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2em;
+  font-weight: bolder;
+  text-align: center;
+}
+
+section.popout p {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.25em;
+  text-align: center;
+}
+
+#pictureWrap {
+  height: 16em;
+}
+.cookiePics img {
+  float: left;
+  width: 18%;
+  margin:10px;
+}
+
+.menu {
+  background-color: rgb(223, 210, 193);
   padding-top: 1px;
   padding-bottom: 30px;
-}
-
-table {
-  font-family: 'Oswald', sans-serif;
-  font-size: 225%;
-  text-align: center;
-  table-layout: fixed;
+  height: 300px;
   width: 100%;
-  border-collapse: collapse;
 }
 
+.menu h2 {
+  font-size: 3em;
+  /* font-family: 'Pacifico', cursive, serif; */
+  font-family: 'Rammetto One', cursive, serif;
+  margin-top: 60px;
+  margin-left: 60px;
+  margin-bottom: 15px;
+  color: rgb(123, 180, 152);
+  -webkit-text-stroke-color: rgb(39, 71, 144);
+  -webkit-text-stroke-width: 2px;
+}
 
-table tr th {
-  margin-right: 30px;
-  font-size: 75%
-  font-weight: bold;
-  padding-bottom: 10px;
+.menu h3 {
+  font-size: 1.5em;
+  font-family: 'Rammetto One', cursive, serif;
+  margin-top: 10px;
+  margin-left: 60px;
+  margin-bottom: 15px;
+  color: rgb(123, 180, 152);
+}
+
+.menu div {
+  display: inline-block;
+  /* float: left; */
+  margin-right: .8em;
+  margin-left: .8em;
+  padding: 10px;
+  width: 21%;
+}
+
+.menu h4 {
   color: rgb(39, 71, 144);
-}
-
-table tr td {
+  margin-bottom: 10px;
   font-family: 'Oswald', sans-serif;
-  font-size: 50%;
-  padding-bottom: 5px;
+  font-size: 2em;
+  font-weight: bolder;
+  text-align: center;
 }
 
-p {
-  font-size: 110%;
-  margin-top: 25px;
-  margin-bottom: 5px;
+.menu p {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.25em;
+  text-align: center;
+
+}
+
+.merchandise {
+  background-color: rgb(223, 210, 193);
+  padding-top: 1px;
+  padding-bottom: 30px;
+  height: 500px;
+  width: 100%;
+}
+
+.merchandise img {
   margin-left: 60px;
-  font-weight: bold;
 }
 
-ul {
-  font-size: 100%;
-}
 
-ul li {
-  margin-bottom: 5px;
+.merchandise h2 {
+  font-size: 3em;
+  font-family: 'Rammetto One', cursive, serif;
+  margin-top: 60px;
   margin-left: 60px;
-  list-style: circle;
+  margin-bottom: 15px;
+  color: rgb(123, 180, 152);
+  -webkit-text-stroke-color: rgb(39, 71, 144);
+  -webkit-text-stroke-width: 2px;
+}
+
+.merchandise h3 {
+  font-size: 1.5em;
+  font-family: 'Rammetto One', cursive, serif;
+  margin-top: 10px;
+  margin-left: 60px;
+  margin-bottom: 15px;
+  color: rgb(123, 180, 152);
 }
