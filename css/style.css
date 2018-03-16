@@ -150,10 +150,11 @@ section.popout p {
 
 .merchandise {
   background-color: rgb(223, 210, 193);
+  float: left;
   padding-top: 1px;
   padding-bottom: 30px;
   height: 500px;
-  width: 100%;
+  width: 50%;
 }
 
 .merchandise img {
@@ -181,5 +182,39 @@ section.popout p {
   color: rgb(123, 180, 152);
 }
 
+.testimonials {
+  background-color: rgb(223, 210, 193);
+  float: right;
+  padding-top: 1px;
+  padding-bottom: 30px;
+  height: 500px;
+  width: 50%;
+}
 
-.testimonials
+
+.testimonials h2 {
+  font-size: 3em;
+  font-family: 'Rammetto One', cursive, serif;
+  margin-top: 60px;
+  margin-left: 60px;
+  margin-bottom: 15px;
+  color: rgb(123, 180, 152);
+  -webkit-text-stroke-color: rgb(39, 71, 144);
+  -webkit-text-stroke-width: 2px;
+}
+
+.testimonials h3 {
+  font-size: 1.5em;
+  font-family: 'Rammetto One', cursive, serif;
+  margin-top: 10px;
+  margin-left: 60px;
+  margin-bottom: 15px;
+  color: rgb(123, 180, 152);
+}
+
+.testimonials p {
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-size: 1.25em;
+  text-align: left;
+  margin: 20px;
+}
