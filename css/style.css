@@ -21,13 +21,14 @@ background-color: rgb(183, 192, 165);
 
 nav ul li {
   display: inline;
+  position: relative;
   font-family: 'Ubuntu Condensed', sans-serif;
   font-size: 1.25em;
   margin: 30px;
   padding: 30px;
 }
 
-nav:hover {
+nav a:hover {
   background-color: black;
   color: white;
 }
