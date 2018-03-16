@@ -45,11 +45,11 @@ body {
 }
 
 section.popout div {
-float: left;
-margin: .75em;
-/* margin: 14px; */
-padding: 10px;
-width: 16%;
+  display: inline-block;
+  /* float: left; */
+  margin: .75em;
+  padding: 10px;
+  width: 16%;
 }
 
 section.popout h4 {
@@ -106,12 +106,12 @@ section.popout p {
 }
 
 .menu div {
-float: left;
-margin-right: .8em;
-margin-left: .8em;
-/* margin: 14px; */
-padding: 10px;
-width: 21%;
+  display: inline-block;
+  /* float: left; */
+  margin-right: .8em;
+  margin-left: .8em;
+  padding: 10px;
+  width: 21%;
 }
 
 .menu h4 {
@@ -129,50 +129,36 @@ width: 21%;
   text-align: center;
 
 }
-/* #pictureWrap {
-  border: 3px solid black;
-  height: 200px;
+
+.merchandise {
+  background-color: rgb(223, 210, 193);
+  padding-top: 1px;
+  padding-bottom: 30px;
+  height: 500px;
   width: 100%;
-} */
-
-/* table {
-  font-family: 'Oswald', sans-serif;
-  font-size: 225%;
-  text-align: center;
-  table-layout: fixed;
-  width: 100%;
-  border-collapse: collapse;
 }
 
-
-table tr th {
-  margin-right: 30px;
-  font-size: 75%
-  font-weight: bold;
-  padding-bottom: 10px;
-  color: rgb(39, 71, 144);
-}
-
-table tr td {
-  font-family: 'Oswald', sans-serif;
-  font-size: 50%;
-  padding-bottom: 5px;
-}
-
-p {
-  font-size: 110%;
-  margin-top: 25px;
-  margin-bottom: 5px;
+.merchandise img {
   margin-left: 60px;
-  font-weight: bold;
-} */
-
-/* ul {
-  font-size: 100%;
 }
 
-ul li {
-  margin-bottom: 5px;
+
+.merchandise h2 {
+  font-size: 3em;
+  font-family: 'Rammetto One', cursive, serif;
+  margin-top: 60px;
   margin-left: 60px;
-  list-style: circle;
-} */
+  margin-bottom: 15px;
+  color: rgb(123, 180, 152);
+  -webkit-text-stroke-color: rgb(39, 71, 144);
+  -webkit-text-stroke-width: 2px;
+}
+
+.merchandise h3 {
+  font-size: 1.5em;
+  font-family: 'Rammetto One', cursive, serif;
+  margin-top: 10px;
+  margin-left: 60px;
+  margin-bottom: 15px;
+  color: rgb(123, 180, 152);
+}
