@@ -106,15 +106,16 @@ section.popout p {
   color: rgb(123, 180, 152);
 }
 
-section.menu div {
+.menu div {
 float: left;
-/* margin: .5em; */
+margin-right: .8em;
+margin-left: .8em;
 /* margin: 14px; */
 padding: 10px;
-width: 16%;
+width: 21%;
 }
 
-section.menu h4 {
+.menu h4 {
   color: rgb(39, 71, 144);
   margin-bottom: 10px;
   font-family: 'Oswald', sans-serif;
@@ -123,7 +124,7 @@ section.menu h4 {
   text-align: center;
 }
 
-section.menu p {
+.menu p {
   font-family: 'Oswald', sans-serif;
   font-size: 1.25em;
   text-align: center;
