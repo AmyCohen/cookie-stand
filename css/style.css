@@ -1,18 +1,35 @@
 
 
 body {
-  /* background: url("../img/seattleBackground.jpg"); */
-  background-color: rgb(183, 192, 165);
+font-family: 'Times New Roman', Times, serif;
+background-color: rgb(183, 192, 165);
 }
 
 #logo {
   margin-left: 30px;
   width: 60%;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #family {
   float: right;
+  margin-top: 20px;
+  margin-bottom: 20px;
   width: 35%;
+}
+
+nav ul li {
+  display: inline;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-size: 1.25em;
+  margin: 30px;
+  padding: 30px;
+}
+
+nav:hover {
+  background-color: black;
+  color: white;
 }
 
 .popout {
@@ -62,7 +79,7 @@ section.popout h4 {
 }
 
 section.popout p {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Ubuntu Condensed', sans-serif;
   font-size: 1.25em;
   text-align: center;
 }
@@ -124,7 +141,7 @@ section.popout p {
 }
 
 .menu p {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Ubuntu Condensed', sans-serif;
   font-size: 1.25em;
   text-align: center;
 
@@ -162,3 +179,6 @@ section.popout p {
   margin-bottom: 15px;
   color: rgb(123, 180, 152);
 }
+
+
+.testimonials
