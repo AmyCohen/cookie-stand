@@ -6,32 +6,13 @@ body {
 }
 
 #logo {
-  /* position: absolute; */
+  margin-left: 30px;
   width: 60%;
 }
 
 #family {
   float: right;
   width: 35%;
-}
-
-h2 {
-  font-size: 225%;
-  font-family: 'Rammetto One', cursive, serif;
-  margin-top: 60px;
-  margin-left: 60px;
-  margin-bottom: 15px;
-  color: rgb(123, 180, 152);
-  -webkit-text-stroke-color: rgb(39, 71, 144);
-  -webkit-text-stroke-width: 2px;
-}
-
-h3 {
-  font-size: 110%;
-  font-family: 'Times New Roman';
-  margin-top: 10px;
-  margin-left: 60px;
-  margin-bottom: 15px;
 }
 
 .popout {
@@ -42,9 +23,31 @@ h3 {
   width: 100%;
 }
 
+.popout h2 {
+  font-size: 3em;
+  /* font-family: 'Pacifico', cursive, serif; */
+  font-family: 'Rammetto One', cursive, serif;
+  margin-top: 60px;
+  margin-left: 60px;
+  margin-bottom: 15px;
+  color: rgb(123, 180, 152);
+  -webkit-text-stroke-color: rgb(39, 71, 144);
+  -webkit-text-stroke-width: 2px;
+}
+
+.popout h3 {
+  font-size: 1.5em;
+  font-family: 'Rammetto One', cursive, serif;
+  margin-top: 10px;
+  margin-left: 60px;
+  margin-bottom: 15px;
+  color: rgb(123, 180, 152);
+}
+
 section.popout div {
 float: left;
-margin: 10px;
+margin: .75em;
+/* margin: 14px; */
 padding: 10px;
 width: 16%;
 }
@@ -65,12 +68,67 @@ section.popout p {
 
 }
 
+#pictureWrap {
+  height: 16em;
+}
 .cookiePics img {
   float: left;
   width: 18%;
   margin:10px;
 }
 
+.menu {
+  background-color: rgb(223, 210, 193);
+  padding-top: 1px;
+  padding-bottom: 30px;
+  height: 300px;
+  width: 100%;
+}
+
+.menu h2 {
+  font-size: 3em;
+  /* font-family: 'Pacifico', cursive, serif; */
+  font-family: 'Rammetto One', cursive, serif;
+  margin-top: 60px;
+  margin-left: 60px;
+  margin-bottom: 15px;
+  color: rgb(123, 180, 152);
+  -webkit-text-stroke-color: rgb(39, 71, 144);
+  -webkit-text-stroke-width: 2px;
+}
+
+.menu h3 {
+  font-size: 1.5em;
+  font-family: 'Rammetto One', cursive, serif;
+  margin-top: 10px;
+  margin-left: 60px;
+  margin-bottom: 15px;
+  color: rgb(123, 180, 152);
+}
+
+section.menu div {
+float: left;
+/* margin: .5em; */
+/* margin: 14px; */
+padding: 10px;
+width: 16%;
+}
+
+section.menu h4 {
+  color: rgb(39, 71, 144);
+  margin-bottom: 10px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2em;
+  font-weight: bolder;
+  text-align: center;
+}
+
+section.menu p {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.25em;
+  text-align: center;
+
+}
 /* #pictureWrap {
   border: 3px solid black;
   height: 200px;
