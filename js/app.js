@@ -143,6 +143,14 @@ function headerRow() {
   salmonCookieStands.appendChild(tHeadElement);
 }
 
+// TODO:
+// password.addEventListener('submit', openSalesHTML);
+
+// function openSalesHTML() {
+// if (password === 123 || '123')
+// open('/index.html');
+// }
+
 headerRow();
 renderAllLocations();
 hourlyTotals();
