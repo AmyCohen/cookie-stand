@@ -1,37 +1,66 @@
 * {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: 'Oswald', sans-serif;
 }
 
 body {
   background-color: rgb(183, 192, 165);
 }
 
+#logo {
+  margin-left: 30px;
+  width: 60%;
+}
+
+#family {
+  float: right;
+  width: 35%;
+}
+
 h1 {
-  font-size: 500%;
-  font-family: 'Pacifico', cursive, serif;
-  margin-top: 60px;
-  margin-bottom: 20px;
-  color: rgb(39, 71, 144);
-  text-align: center;
-  }
+font-size: 500%;
+font-family: 'Pacifico', cursive, serif;
+margin-top: 60px;
+margin-bottom: 20px;
+color: rgb(39, 71, 144);
+text-align: center;
+}
 
 h2 {
-  font-size: 300%;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  margin-bottom: 40px;
-  color: rgb(39, 71, 144);
+  font-size: 3em;
+  /* font-family: 'Pacifico', cursive, serif; */
+  font-family: 'Rammetto One', cursive, serif;
+  margin-top: 60px;
+  margin-bottom: 15px;
   text-align: center;
+  color: rgb(123, 180, 152);
+  -webkit-text-stroke-color: rgb(39, 71, 144);
+  -webkit-text-stroke-width: 2px;
 }
   
+h4 {
+  color: rgb(39, 71, 144);
+  margin-bottom: 10px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.25em;
+  font-weight: bolder;
+  text-align: center;
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5em;
+  text-align: left;
+}
 
 table {
-	border: 10px solid rgb(56, 132, 207);
+	border: 3px solid rgb(56, 132, 207);
   empty-cells: hide;
   table-layout: auto;
   width: 100%;
   border-collapse: collapse;
   background-color: rgb(223, 210, 193);
-
 }
 
 td {
@@ -39,6 +68,7 @@ td {
   border: 1px solid black;
   text-align: center;
   vertical-align: middle;
+  font-family: 'Oswald', sans-serif;
 }
 
 th {
@@ -49,6 +79,7 @@ th {
   text-align: center;
   vertical-align: middle;
   font-weight: bold;
+  font-family: 'Oswald', sans-serif;
 }
 
 td:first-child {
@@ -67,9 +98,10 @@ th:last-child {
 }
 
 form {
+  background-color: rgb(223, 210, 193);
+  border: 3px solid rgb(56, 132, 207);
   margin: 30px;
   padding: 10px;
-  background-color: rgb(223, 210, 193);
   width: 28%;
 }
 
@@ -77,10 +109,3 @@ legend {
   color: black;
   font-size: 150%;
 }
-
-p {
-  font-size: 130%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
