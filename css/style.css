@@ -218,3 +218,7 @@ section.popout p {
   text-align: left;
   margin: 20px;
 }
+
+#password {
+  margin-left: auto;
+}
