@@ -2,7 +2,7 @@
 
 body {
 font-family: 'Times New Roman', Times, serif;
-background-color: rgb(183, 192, 165);
+background-color: rgb(183, 192, 164);
 }
 
 #logo {
@@ -17,6 +17,12 @@ background-color: rgb(183, 192, 165);
   margin-top: 20px;
   margin-bottom: 20px;
   width: 35%;
+}
+
+h1 {
+  color: #274790;
+  font-family: 'Pacifico', cursive, serif;
+  font-size: 3.5em;
 }
 
 nav ul li {
@@ -34,7 +40,7 @@ nav a:hover {
 }
 
 .popout {
-  background-color: rgb(223, 210, 193);
+  background-color: #dfd2c1;
   padding-top: 1px;
   padding-bottom: 30px;
   height: 300px;
@@ -48,18 +54,16 @@ nav a:hover {
   margin-top: 60px;
   margin-left: 60px;
   margin-bottom: 15px;
-  color: rgb(123, 180, 152);
-  -webkit-text-stroke-color: rgb(39, 71, 144);
-  -webkit-text-stroke-width: 2px;
+  color: rgb(134, 89, 45);
 }
 
 .popout h3 {
   font-size: 1.5em;
-  font-family: 'Rammetto One', cursive, serif;
+  font-family: 'Arial Narrow', sans-serif;
   margin-top: 10px;
   margin-left: 60px;
   margin-bottom: 15px;
-  color: rgb(123, 180, 152);
+  color: rgb(191, 128, 64);
 }
 
 section.popout div {
@@ -104,23 +108,20 @@ section.popout p {
 
 .menu h2 {
   font-size: 3em;
-  /* font-family: 'Pacifico', cursive, serif; */
   font-family: 'Rammetto One', cursive, serif;
   margin-top: 60px;
   margin-left: 60px;
   margin-bottom: 15px;
-  color: rgb(123, 180, 152);
-  -webkit-text-stroke-color: rgb(39, 71, 144);
-  -webkit-text-stroke-width: 2px;
+  color: rgb(134, 89, 45);
 }
 
 .menu h3 {
   font-size: 1.5em;
-  font-family: 'Rammetto One', cursive, serif;
+  font-family: 'Arial Narrow', sans-serif;
   margin-top: 10px;
   margin-left: 60px;
   margin-bottom: 15px;
-  color: rgb(123, 180, 152);
+  color: rgb(191, 128, 64);
 }
 
 .menu div {
@@ -168,18 +169,16 @@ section.popout p {
   margin-top: 60px;
   margin-left: 60px;
   margin-bottom: 15px;
-  color: rgb(123, 180, 152);
-  -webkit-text-stroke-color: rgb(39, 71, 144);
-  -webkit-text-stroke-width: 2px;
+  color: rgb(134, 89, 45);
 }
 
 .merchandise h3 {
   font-size: 1.5em;
-  font-family: 'Rammetto One', cursive, serif;
+  font-family: 'Arial Narrow', sans-serif;
   margin-top: 10px;
   margin-left: 60px;
   margin-bottom: 15px;
-  color: rgb(123, 180, 152);
+  color: rgb(191, 128, 64);
 }
 
 .testimonials {
@@ -198,18 +197,16 @@ section.popout p {
   margin-top: 60px;
   margin-left: 60px;
   margin-bottom: 15px;
-  color: rgb(123, 180, 152);
-  -webkit-text-stroke-color: rgb(39, 71, 144);
-  -webkit-text-stroke-width: 2px;
+  color: rgb(134, 89, 45);
 }
 
 .testimonials h3 {
   font-size: 1.5em;
-  font-family: 'Rammetto One', cursive, serif;
+  font-family: 'Arial Narrow', sans-serif;
   margin-top: 10px;
   margin-left: 60px;
   margin-bottom: 15px;
-  color: rgb(123, 180, 152);
+  color: rgb(191, 128, 64);
 }
 
 .testimonials p {
@@ -221,4 +218,81 @@ section.popout p {
 
 #password {
   margin-left: auto;
+}
+
+p {
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-size: 1.25em;
+  text-align: center;
+}
+
+#branding h1 {
+  width: 100%;
+  margin: 20px 30px;
+}
+
+.largeLogo, .smallLogo {
+  width: 100%;
+  margin: 100px;
+}
+
+.largeLogo p, .smallLogo p {
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-size: 1.25em;
+  text-align: left;
+}
+
+.headingColors {
+  height: 250px;
+  background-color: white;
+}
+
+.headingColors p {
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-size: 1.25em;
+  margin-left: 30px;
+  text-align: left;
+}
+
+.headingColors ul {
+  display: inline-block;
+  margin: 40px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.textStyling h1 {
+  color: #274790;
+  font-family: 'Pacifico', cursive, serif;
+  font-size: 3.5em;
+  margin: 30px;
+}
+
+.textStyling h2 {
+  color: rgb(134, 89, 45);
+  font-family: 'Rammetto One', cursive, serif;
+  font-size: 3em;
+  margin: 30px;
+}
+
+.textStyling h3 {
+  color: rgb(191, 128, 64);
+  font-family: 'Arial Narrow', sans-serif;
+  font-size: 1.5em;
+  margin: 30px;
+}
+
+.textStyling h4 {
+  color: rgb(39, 71, 144);
+  font-family: 'Oswald', sans-serif;
+  font-size: 2em;
+  font-weight: bolder;
+  margin: 30px;
+}
+
+.textStyling p {
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-size: 1.25em;
+  margin: 30px;
+  text-align: left;
 }
